@@ -109,7 +109,7 @@ gmm = GMM(X)
 datay = data['y']
 c = 0
 d= []
-print("The actual outliers of dataset is : ")
+print("The actual outlier points of dataset is : ")
 for i in range(datay.shape[0]):
     if (datay[i] == 1):
         c = c + 1
@@ -123,13 +123,13 @@ result = []
 for i in range(176):
     result.append(labels[i][0])
 result.sort()
-print("the predicted outliers is :")
+print("the predicted outlier points is :")
 print(result)
 r = 0
 for i in result:
     if (i >= 1655):
         r += 1
-print("There is ", r, " correct outlier predicted out of all 176 outliers")
+print("There are ", r, " correct outlier points predicted out of all 176 outlier points")
 #print(labels)
 
 #plt.scatter(X[:, 0], X[:, 1], c=labels, s=40, cmap='viridis');
